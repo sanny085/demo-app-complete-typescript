@@ -1,14 +1,15 @@
-import {useState} from 'react'
-import {NavbarPropsType} from '../types/data.model' 
+import React, {useState} from 'react'
+import { NavbarPropsType } from '../types/data.model' 
 
 // optional props token 
 const Navbar : React.FC<NavbarPropsType>  = ({fName, lName, isLoggedIn, token}) => {
-   const [accessToken, setAccessToken] = useState('');
+    const [accessToken, setAccessToken] = useState<string>('');
   
+    console.log('Token', token);
    
-   if(token == null ){
-    setAccessToken('zx46wnfpdghsplafp') 
-   }
+  //  if(!token ){
+  //   setAccessToken('zx46wnfpdghsplafp')
+  //  }
 
    console.log('Access Token', accessToken, isLoggedIn);
    console.log('Greeting props : ', fName);

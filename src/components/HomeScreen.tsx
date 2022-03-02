@@ -18,7 +18,7 @@ const HomeScreen = ({mentors}: HomeScreenProps) => {
         </thead> 
         <tbody>  
          {mentors.map((mentor, idx)=>(
-             <tr>
+             <tr key={idx}>
              <th scope="row">{idx+1}</th>
              <td>{mentor.name}</td>
              <td>{mentor.specialization}</td>
